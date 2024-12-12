@@ -475,31 +475,31 @@ const Iris = () => {
 
             <div className="rounded-md  flex flex-col border border-secondary/25 shadow-md text-white">
               <Table>
-                <TableHeader>
+                <TableHeader >
                   <TableRow>
                     <TableHead className="cursor-pointer" onClick={sortByName}>
                       <div className="flex items-center my-3">
-                        <p className="text-center text-lg">Name</p>
+                        <p className="text-center text-lg text-cyan-400">Name</p>
                         <ArrowDownUp className="h-4 w-4 ml-1" />
                       </div>
                     </TableHead>
                     <TableHead onClick={sortByPrice} className="cursor-pointer">
                       <div className="flex items-center">
-                        <p className="text-center text-lg">Price</p>
+                        <p className="text-center text-lg text-cyan-400">Price</p>
                         <ArrowDownUp className="h-4 w-4 ml-1" />
                       </div>
                     </TableHead>
-                    <TableHead className="text-center underline text-lg">
+                    <TableHead className="text-center underline text-lg text-cyan-400">
                       52 Week High
                     </TableHead>
-                    <TableHead className="text-center underline text-lg whitespace-nowrap">
+                    <TableHead className="text-center underline text-lg whitespace-nowrap text-cyan-400">
                       52 Week Low
                     </TableHead>
 
-                    <TableHead className="text-center underline text-lg">
+                    <TableHead className="text-center underline text-lg text-cyan-400">
                       Change
                     </TableHead>
-                    <TableHead className="text-center text-lg ">
+                    <TableHead className="text-center text-lg text-cyan-400 ">
                       Compliance
                     </TableHead>
                   </TableRow>

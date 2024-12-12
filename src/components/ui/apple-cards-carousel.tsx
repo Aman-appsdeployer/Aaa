@@ -1,6 +1,6 @@
-import  { useEffect, useRef, useState, createContext, useContext } from "react";
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { BlurImage } from "./BlurImage";
 
@@ -244,7 +244,7 @@ export const Card = ({
           </div>
           <motion.p
             layoutId={layout ? `title-${card.edition}` : undefined}
-            className="text-white text-xs md:text-xs font-extralight max-w-xs text-left [text-wrap:balance]   mt-2"
+            className="text-cyan-400 text-xs md:text-xs font-extralight max-w-xs text-left [text-wrap:balance]   mt-2"
           >
             Read More
           </motion.p>
@@ -252,7 +252,7 @@ export const Card = ({
         <BlurImage
           src={card.src}
           alt={card.title}
-          className="object-cover h-[100%] absolute z-10 inset-0 transition-opacity duration-400 hover:opacity-100 hover:blur-sm"
+          className="object-cover h-[100%] absolute z-10 inset-0 transition-opacity duration-400 hover:opacity-100 hover:blur-sm "
         />
 
 

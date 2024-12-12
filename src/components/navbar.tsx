@@ -156,7 +156,7 @@ function HomeLogo() {
             <img
                 src="/logo2.png"
                 alt="Nuqi Logo"
-                className="h-12 w-auto object-contain"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
             />
         </Link>
     );

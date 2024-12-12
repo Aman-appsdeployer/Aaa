@@ -88,7 +88,7 @@ export function Footer() {
                 </div>
 
                 {/* Disclaimer Section */}
-                <div className="mt-10 text-center text-xs text-white leading-relaxed">
+                <div className="mt-10 text-center text-xs text-gray-400 leading-relaxed">
                     <p>
                         © 2023 Nuqi Digital Wealth Limited. All rights reserved. <br />
                         Nuqi Digital Wealth Limited is regulated by the Dubai Financial Services Authority
