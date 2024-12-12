@@ -723,7 +723,7 @@ const Iris = () => {
               </svg>
             </button>
             <form className="flex flex-col items-start gap-3">
-              <div className="flex items-center justify-center w-15 h-15 bg-[#ECF1FD] shadow-[0px_0.5px_0.5px_#EFEFEF,0px_1px_0.5px_rgba(239,239,239,0.5)] rounded-sm">
+              <div className="flex items-center justify-center w-15 h-15   rounded-sm">
                 {/* Replace with actual icon */}
                 <LockClosedIcon className="mb-2 h-8 w-8 text-white" />
               </div>
