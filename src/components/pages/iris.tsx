@@ -326,22 +326,7 @@ const Iris = () => {
       </div>
 
 
-      {/* <div className="flex flex-wrap gap-8 p-4 bg-black rounded-lg shadow-md ml-20 mt-5">
-        <div className="flex flex-wrap gap-8 w-full justify-center sm:justify-start sm:flex-col lg:flex-row">
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium  rounded-md shadow-sm text-cyan-400  hover:text-cyan-400 focus:outline-none text-center">
-            <span>Most Active</span>
-          </button>
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white  rounded-md shadow-sm hover:text-cyan-400  focus:outline-none text-center">
-            <span>Most Popular</span>
-          </button>
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-md shadow-sm hover:text-cyan-400 focus:outline-none text-center">
-            <span>Top Gainers</span>
-          </button>
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-black rounded-md shadow-sm hover:text-cyan-400 focus:outline-none text-center">
-            <span>Top Losers</span>
-          </button>
-        </div>
-      </div> */}
+
 
 
       <div className="flex md:container py-10 w-full">
@@ -355,23 +340,23 @@ const Iris = () => {
                 <DialogTrigger className=" md:hidden">
                   <SlidersHorizontal className="h-4 w-4 md:hidden" />
                 </DialogTrigger>
-                <DialogContent className="p-0">
+                <DialogContent className="p-0 bg-black">
                   <>
                     <div className="flex flex-col border border-secondary/25 shadow-md rounded-md whitespace-nowrap max-h-min">
                       <div className="flex items-center gap-1 px-4 py-2">
                         <Filter className="h-4 w-4 text-muted-foreground" />
-                        <h2 className="text-xl font-semibold tracking-wide">
+                        <h2 className="text-xl font-semibold tracking-wide  text-white">
                           Filter By
                         </h2>
                       </div>
                       <Separator className="bg-secondary/25 my-1" />
-                      <div className="w-full ">
-                        <Accordion type="single" collapsible className="w-full">
+                      <div className="w-full bg-black ">
+                        <Accordion type="single" collapsible className="w-full rounded-3xl">
                           <AccordionItem value="item-1" className="">
                             <AccordionTrigger className="px-1 py-2">
                               <div className="flex items-center gap-1 px-4 py-2">
                                 <Flag className="h-4 w-4 text-muted-foreground" />
-                                <h2 className="text-lg font-semibold">
+                                <h2 className="text-lg font-semibold text-white">
                                   Region
                                 </h2>
                               </div>
@@ -381,7 +366,7 @@ const Iris = () => {
                                 onValueChange={(option) => setRegion(option)}
                                 defaultValue={region}
                               >
-                                <div className="flex flex-col gap-3">
+                                <div className="flex flex-col gap-3 text-white">
                                   {irisRegions.map((r) => (
                                     <div
                                       className="flex items-center space-x-2"
@@ -405,13 +390,13 @@ const Iris = () => {
                             <AccordionTrigger className="px-1 py-2">
                               <div className="flex items-center gap-1 px-4 py-2">
                                 <AreaChart className="h-4 w-4 text-muted-foreground" />
-                                <h2 className="text-lg font-semibold">
+                                <h2 className="text-lg font-semibold text-white">
                                   Sector
                                 </h2>
                               </div>
                             </AccordionTrigger>
                             <AccordionContent className="px-5 py-2">
-                              <div className="flex flex-col gap-3">
+                              <div className="flex flex-col gap-3 text-white">
                                 {irisSectors.map((sector) => (
                                   <div
                                     className="flex items-center space-x-2"
@@ -456,13 +441,13 @@ const Iris = () => {
                     </div>
                     <div className="flex w-full items-center gap-4 p-2">
                       <button
-                        className="w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#3d4957,45%,#1e2631,55%,#3d4957)] bg-[length:200%_100%] px-4 lg:px-6 font-medium text-background transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 whitespace-nowrap"
+                        className="w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border text-white bg-cyan-400"
                         onClick={onReset}
                       >
                         Reset
                       </button>
                       <button
-                        className="w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#3d4957,45%,#1e2631,55%,#3d4957)] bg-[length:200%_100%] px-4 lg:px-6 font-medium text-background transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 whitespace-nowrap"
+                        className="w-full inline-flex h-12 animate-shimmer items-center justify-center rounded-md border text-white bg-cyan-400"
                         onClick={onApply}
                       >
                         Apply
@@ -542,7 +527,7 @@ const Iris = () => {
                           </TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableCell className="font-normal md:font-medium md:hidden md:px-8 px-3">
+                          {/* <TableCell className="font-normal md:font-medium md:hidden md:px-8 px-3">
                             {!isUserLogedIn && index === 3 && (
                               <button
                                 className="md:col-start-2 ml-10 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border bg-cyan-400 text-black"
@@ -552,7 +537,19 @@ const Iris = () => {
                                 Sign-Up for free and unlock.
                               </button>
                             )}
+                          </TableCell> */}
+                          <TableCell className="font-normal md:font-medium md:hidden md:px-8 px-3">
+                            {!isUserLogedIn && index === 3 && (
+                              <button
+                                className="md:col-start-2 ml-10 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border bg-cyan-400 text-black text-sm md:text-base mx-auto"
+                                onClick={() => setShowUserLoginModal(true)}
+                              >
+                                <LockClosedIcon className="mr-2 h-6 w-6" />
+                                <span className="truncate max-w-full">Sign-Up for free and unlock.</span>
+                              </button>
+                            )}
                           </TableCell>
+
                           <TableCell className="font-normal md:font-semibold whitespace-nowrap"></TableCell>
                           <TableCell className="text-center whitespace-nowrap"></TableCell>
                           <TableCell className="text-center whitespace-nowrap hidden md:block">
@@ -631,10 +628,90 @@ const Iris = () => {
 
 
       {showUserLoginModal && (
+        // <div className="fixed inset-0 bg-black bg-opacity-75 z-10 flex justify-center items-center">
+        //   <div className="relative w-[320px] bg-black shadow-[0px_187px_75px_rgba(0,0,0,0.01),0px_105px_63px_rgba(0,0,0,0.05),0px_47px_47px_rgba(0,0,0,0.09),0px_12px_26px_rgba(0,0,0,0.1),0px_0px_0px_rgba(0,0,0,0.1)] rounded-xl p-5">
+        //     <button
+        //       className="absolute top-2 right-2 text-white "
+        //       onClick={() => {
+        //         setShowUserLoginModal(false);
+        //         setError2(null);
+        //         setError1(null);
+        //       }}
+        //     >
+        //       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        //         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        //       </svg>
+        //     </button>
+        //     <form className="flex flex-col items-start gap-5 ">
+        //       <div className="flex items-center justify-center w-15 h-15 bg-[#ECF1FD] shadow-[0px_0.5px_0.5px_#EFEFEF,0px_1px_0.5px_rgba(239,239,239,0.5)] rounded-sm">
+        //         {/* Replace with actual icon */}
+        //         <LockClosedIcon className="mb-2 h-10 w-10 text-white" />
+        //       </div>
+        //       <div className="flex flex-col gap-2">
+        //         <label className="font-normal  text-lg leading-6 text-white">Subscribe for updates</label>
+        //         <span className=" font-semibold text-xs leading-5 text-white">Subscribe to this weekly newsletter so you don’t miss out on the new hot tech topics.</span>
+        //       </div>
+        //       {error1 && error1.error && (
+        //         <p className="text-red-500 text-sm mb-2 font-medium">{error1.error}</p>
+        //       )}
+        //       <div className="inputGroup w-72 text-white">
+        //         <input
+        //           autoComplete="off"
+        //           required
+        //           type="text"
+        //           id="name"
+        //           value={name}
+        //           onChange={(e) => setName(e.target.value)}
+        //         />
+        //         <label htmlFor="name">Name</label>
+        //       </div>
+
+        //       <div className="inputGroup w-72">
+        //         <input
+        //           autoComplete="off"
+        //           required
+        //           type="email"
+        //           id="name"
+        //           value={name}
+        //           onChange={(e) => setEmail(e.target.value)}
+        //         />
+        //         <label htmlFor="email">Email:</label>
+        //       </div>
+
+        //       <div className="w-72 relative">
+        //         <div className="flex border-2 border-[rgb(200, 200, 200)] rounded-3xl relative">
+        //           <span className="flex items-center border-r border-[rgb(200, 200, 200)] px-3">
+        //             +971
+        //           </span>
+        //           <input
+        //             type="tel"
+        //             id="tel"
+        //             className="w-full px-4 py-[11px] border-none outline-none bg-transparent rounded-e-xl peer"
+        //             onChange={(e) => setNumber(e.target.value)}
+        //             value={number}
+        //           />
+        //           <label
+        //             htmlFor="tel"
+        //             className="absolute left-16 top-[0.5rem] transform -translate-y-[-8%] text-black transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-0 peer-focus:top-1 peer-focus:scale-90 peer-focus:-translate-y-[1.2rem] bg-white px-1"
+        //           >
+        //             Phone number
+        //           </label>
+        //         </div>
+        //       </div>
+        //       <button
+        //         className="flex flex-row justify-center items-center px-4 py-2 gap-2 w-full h-10 bg-gradient-to-b bg-cyan-400  shadow-sm rounded-3xl border-0 font-semibold text-xs text-white"
+        //         type="submit"
+        //         onClick={onSendOTP}
+        //       >
+        //         Submit
+        //       </button>
+        //     </form>
+        //   </div>
+        // </div>
         <div className="fixed inset-0 bg-black bg-opacity-75 z-10 flex justify-center items-center">
-          <div className="relative w-[320px] bg-white shadow-[0px_187px_75px_rgba(0,0,0,0.01),0px_105px_63px_rgba(0,0,0,0.05),0px_47px_47px_rgba(0,0,0,0.09),0px_12px_26px_rgba(0,0,0,0.1),0px_0px_0px_rgba(0,0,0,0.1)] rounded-xl p-5">
+          <div className="relative w-[320px] bg-black shadow-[0px_187px_75px_rgba(0,0,0,0.01),0px_105px_63px_rgba(0,0,0,0.05),0px_47px_47px_rgba(0,0,0,0.09),0px_12px_26px_rgba(0,0,0,0.1),0px_0px_0px_rgba(0,0,0,0.1)] rounded-xl p-4 text-white">
             <button
-              className="absolute top-2 right-2 text-gray-500 "
+              className="absolute top-2 right-2 text-white"
               onClick={() => {
                 setShowUserLoginModal(false);
                 setError2(null);
@@ -645,17 +722,19 @@ const Iris = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
-            <form className="flex flex-col items-start gap-5">
+            <form className="flex flex-col items-start gap-3">
               <div className="flex items-center justify-center w-15 h-15 bg-[#ECF1FD] shadow-[0px_0.5px_0.5px_#EFEFEF,0px_1px_0.5px_rgba(239,239,239,0.5)] rounded-sm">
                 {/* Replace with actual icon */}
-                <LockClosedIcon className="mb-2 h-10 w-10 text-[#2B2B2F]" />
+                <LockClosedIcon className="mb-2 h-8 w-8 text-white" />
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-normal  text-lg leading-6 text-[#2B2B2F]">Subscribe for updates</label>
-                <span className=" font-semibold text-xs leading-5 text-[#5F5D6B]">Subscribe to this weekly newsletter so you don’t miss out on the new hot tech topics.</span>
+              <div className="flex flex-col gap-1">
+                <label className="font-normal text-xs leading-4 text-white">Subscribe for updates</label>
+                <span className="font-semibold text-xs leading-3 text-white">
+                  Subscribe to this weekly newsletter so you don’t miss out on the new hot tech topics.
+                </span>
               </div>
               {error1 && error1.error && (
-                <p className="text-red-500 text-sm mb-2 font-medium">{error1.error}</p>
+                <p className="text-red-500 text-xs mb-2 font-medium">{error1.error}</p>
               )}
               <div className="inputGroup w-72">
                 <input
@@ -665,8 +744,9 @@ const Iris = () => {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  placeholder="Name"
+                  className="w-full px-4 py-[11px] border-2 border-[rgb(200, 200, 200)] rounded-3xl bg-transparent text-white placeholder:text-gray-500 text-xs focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
-                <label htmlFor="name">Name</label>
               </div>
 
               <div className="inputGroup w-72">
@@ -674,35 +754,31 @@ const Iris = () => {
                   autoComplete="off"
                   required
                   type="email"
-                  id="name"
-                  value={name}
+                  id="email"
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                  className="w-full px-4 py-[11px] border-2 border-[rgb(200, 200, 200)] rounded-3xl bg-transparent text-white placeholder:text-gray-500 text-xs focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
-                <label htmlFor="email">Email</label>
               </div>
 
               <div className="w-72 relative">
                 <div className="flex border-2 border-[rgb(200, 200, 200)] rounded-3xl relative">
-                  <span className="flex items-center border-r border-[rgb(200, 200, 200)] px-3">
+                  <span className="flex items-center border-r border-[rgb(200, 200, 200)] px-3 text-white text-xs">
                     +971
                   </span>
                   <input
                     type="tel"
                     id="tel"
-                    className="w-full px-4 py-[11px] border-none outline-none bg-transparent rounded-e-xl peer"
+                    className="w-full px-4 py-[11px] border-none outline-none bg-transparent rounded-e-xl peer text-white placeholder:text-gray-500 text-xs focus:outline-none focus:ring-2 focus:ring-cyan-400"
                     onChange={(e) => setNumber(e.target.value)}
                     value={number}
+                    placeholder="Phone number"
                   />
-                  <label
-                    htmlFor="tel"
-                    className="absolute left-16 top-[0.5rem] transform -translate-y-[-8%] text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-0 peer-focus:top-1 peer-focus:scale-90 peer-focus:-translate-y-[1.2rem] bg-white px-1"
-                  >
-                    Phone number
-                  </label>
                 </div>
               </div>
               <button
-                className="flex flex-row justify-center items-center px-4 py-2 gap-2 w-full h-10 bg-gradient-to-b bg-cyan-400  shadow-sm rounded-3xl border-0 font-semibold text-xs text-white"
+                className="flex flex-row justify-center items-center px-4 py-2 gap-2 w-full h-10 bg-gradient-to-b from-cyan-400 to-cyan-500 shadow-sm rounded-3xl border-0 font-semibold text-xs text-white"
                 type="submit"
                 onClick={onSendOTP}
               >
@@ -711,6 +787,7 @@ const Iris = () => {
             </form>
           </div>
         </div>
+
       )}
 
 
